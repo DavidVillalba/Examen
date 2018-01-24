@@ -1,4 +1,3 @@
-/*972*/
 @font-face {
     font-family: 'Cybernetyka';
     src: url('../fonts/Cybernetyka.eot');
@@ -29,82 +28,43 @@ body {
 
 #logo{
     text-align: center;
+    padding-top: 10%;
 }
 
 .menu{
-    margin-top: 10vh;
-    margin-bottom: 5vh;
     text-align: center;
+    position: fixed;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    background-color: #333;
+    width: 100%
 }
 
 .menu a{
     color: #E4C049;
     cursor: pointer;
     font-family: Cybernetyka;
-    font-size: 1.6vmin;
+    font-size: 15px;
     letter-spacing: 5px;
-    margin: 0px 10px;
+    //margin: 0px 10px;
     padding: 8px 8px;
     text-decoration: none;
+
+    //font-size: 15px;
+    //display: block;
+    margin: 0px;    
+}
+
+#inicio,#info,#ubicacion,#about{
+    display: block;
 }
 
 .menu a:before, .menu a:after{
-    font-size: 2.3vmin;
-    opacity: 0;
-    top: 0px;
-    transition: 0.8s;
-    content: '···';
-}
-
-.menu a:hover:before, .menu a:hover:after{
-    opacity: 1;
-    transform: translateX(0px);
-}
-
-#menuMovil{
     display: none;
 }
 
-@media screen and (max-width: 900px){
-
-    #logo{
-        padding-top: 10%;
-    }
-
-    .menu{
-        position: fixed;
-        margin-top: 0%;
-        margin-bottom: 0%;
-        background-color: #333;
-        width: 100%
-    }
-
-    .menu a{
-        font-size: 15px;
-        display: block;
-        margin: 0px;
-    }
-
-    .menu a:before, .menu a:after{
-        display: none;
-    }
-
-    .menu a#info, .menu a#ubicacion, .menu a#about{
-        display: none;
-    } 
-
-    .menu a#menuMovil{
-        display: block;
-        position: absolute;
-    }
-
-    #menuMovil{  
-        /*width:30px;*/
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none; 
-    }
+#menuMovil{
+    display: block;
 }
 
 #titulo{
@@ -113,6 +73,18 @@ body {
     font-size: 10vmin;
     letter-spacing: 0.15em;
     margin-top: 10px;
+}
+
+#containerInfo,#containerUbicacion,#containerAbout{
+    display: none;
+    margin: 0 15%;
+}
+
+h2{
+    color: #FBFCFC;
+    font-family: Cybernetyka;
+    margin: 0 2%;
+    letter-spacing: 0.15em;
 }
 
 #containerBtn{
@@ -126,4 +98,20 @@ body {
 #containerBtn a:hover{
     opacity: 1;
     transition: 0.3s;
+}
+
+.menu a#info, .menu a#ubicacion, .menu a#about{
+    display: none;
+} 
+
+.menu a#menuMovil{
+    display: block;
+    position: absolute;
+}
+
+#menuMovil{  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
