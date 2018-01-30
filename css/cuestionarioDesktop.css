@@ -93,16 +93,18 @@ header{
 
 #containerForm{
     padding: 24px 0;
+    background-color: rgba(46,44,41,0.7)/*#2E2C29*/;
+    /*opacity: 0.8;*/
 }
 
-#fondoForm{
+/*#fondoForm{
     background-color: #2E2C29;
     position: absolute;
     height: 104%;
     width: 80%;
     z-index: -1;
     opacity: 0.8;
-}
+}*/
 
 #formulario{
     padding: 0% 3% 0% 3%;
