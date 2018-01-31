@@ -47,22 +47,21 @@
     <question>
         <type>checkbox</type>
         <title>En HTML, una tabla de datos emplea las siguientes etiquetas</title>
-        <option>a) <thead></option>
-        <option>b) <tfoot></option> 
-        <option>c) <caption></option>
+        <option>a) &lt;thead&gt;</option>
+        <option>b) &lt;tfoot&gt;</option> 
+        <option>c) &lt;caption&gt;</option>
         <answer>1</answer>
         <answer>2</answer>
         <answer>3</answer>
     </question>
     <question>
         <type>checkbox</type>
-        <title></title>
-        <option>1</option>
-        <option>2</option> 
-        <option>3</option> 
-        <option>4</option>
+        <title>¿Cuál de las siguientes afirmaciones es falsa?</title>
+        <option>a) Todos los documentos XML deben tener un DTD</option>
+        <option>b) Todas las etiquetas de un documento XML se tienen que escribir en minúsculas</option>
+        <option>c) Todas las etiquetas se tienen que cerrar correctamente</option>
         <answer>1</answer>
-        <answer>3</answer>
+        <answer>2</answer>
     </question>
     <question>
         <type>radio</type>
