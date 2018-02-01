@@ -5,24 +5,36 @@
         <meta name="description" content="Proyecto: Creación de un examen con autocorrección">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/desktop.css">
-        <!--script src="js/js.js"></script-->
+        <!--link rel="stylesheet" type="text/css" href="css/Desktop.css"-->
+        <link rel='stylesheet' media='screen and (min-width: 961px)' href='css/desktop.css'>
+        <link rel='stylesheet' media='screen and (max-width: 960px)' href='css/movil.css'>
+        <script src="js/js.js"></script>
     </head>
     <body>
-        <div id="logo">
-            <img src="img/logo.png" alt="logo">
-        </div>
-        <nav id="menu">
-            <a><span id="inicio">INICIO</span></a>
-            <a><span id="info">INFORMACIÓN</span></a>
-            <a><span id="ubicacion">UBICACIÓN</span></a>
-            <a><span id="about">ABOUT</span></a>
+        <nav class="menu">
+            <a id="menuMovil">&#9776;</a>
+            <a id="inicio">INICIO</a>
+            <a id="info">INFORMACIÓN</a>
+            <a id="ubicacion">UBICACIÓN</a>
+            <a id="about">ABOUT</a>
         </nav>
-        <h1 id="titulo">UNIVERSIDAD<br>NOSTRADAMUS</h1>
+        <header id="logo">
+            <img src="img/logo.png" alt="logo">
+            <h1 id="titulo">UNIVERSIDAD<br>NOSTRADAMUS</h1>
+        </header>
         <div id="containerBtn">
-            <a href="#">
+            <a href="cuestionario.html">
                 <img src="img/boton.png" alt="examen">
             </a>
+        </div>
+        <div id="containerInfo">
+            <h2>Información</h2>
+        </div>
+        <div id="containerUbicacion">
+            <h2>Ubicación</h2>
+        </div>
+        <div id="containerAbout">
+            <h2>About</h2>
         </div>
     </body>
 </html>

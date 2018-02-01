@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Cybernetyka';
+    src: url('../fonts/Cybernetyka.eot');
+    src: url('../fonts/Cybernetyka.woff2') format('woff2'),
+        url('../fonts/Cybernetyka.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CybernetykaNormal';
+    src: url('../fonts/CybernetykaNormal.woff') format('woff'),
+        url('../fonts/CybernetykaNormal.ttf') format('truetype'),
+        url('../fonts/CybernetykaNormal.svg#CybernetykaNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,html{
+    /*height: 1300px;*/
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background: url(../img/fondo.jpg) no-repeat 100% 0 fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 1245px;
+}
+
+header{
+    text-align: center;
+}
+
+#logo{
+    margin-top: 10px;
+}
+
+#titulo{
+    color: #FBFCFC;
+    letter-spacing: 10px;
+    font-family: Cybernetyka;
+}
+
+#menu{
+    /*margin-left: 60px;*/
+    /*position: relative;*/
+    text-align: center;
+    top: 1%;
+}
+
+#menu a{
+    color: #E4C049;
+    cursor: pointer;
+    font-family: Cybernetyka;
+    font-size: 17px;
+    letter-spacing: 5px;
+    margin: 0px 60px;
+    position: relative;
+    padding: 8px 8px;
+    text-decoration: none;
+}
+
+#menu a:before, #menu a:after{
+    font-size: 30px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: 0.3s;
+}
+
+#menu a:before{
+    content: '···';
+    left: -40px;
+    transform: translateX(10px);
+}
+
+#menu a:after{
+    content: '···';
+    right: -40px;
+    transform: translateX(-10px);
+}
+
+#menu a:hover:before, #menu a:hover:after{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+#containerForm{
+    padding: 24px 0;
+    background-color: rgba(46,44,41,0.7)/*#2E2C29*/;
+    /*opacity: 0.8;*/
+}
+
+/*#fondoForm{
+    background-color: #2E2C29;
+    position: absolute;
+    height: 104%;
+    width: 80%;
+    z-index: -1;
+    opacity: 0.8;
+}*/
+
+#formulario{
+    padding: 0% 3% 0% 3%;
+}
+
+h4{
+    color: #FBFCFC;
+    font-size: 20px;
+}
+
+#containerBtn{
+    bottom: 10%;
+    position: relative;
+    text-align: center;
+}
+
+#containerBtn a{
+    opacity: 0.8;
+}
+
+#containerBtn a:hover{
+    opacity: 1;
+    transition: 0.3s;
+}

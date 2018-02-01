@@ -28,45 +28,43 @@ body {
 
 #logo{
     text-align: center;
+    padding-top: 10%;
 }
 
 .menu{
-    margin-top: 10vh;
-    margin-bottom: 5vh;
     text-align: center;
+    position: fixed;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    background-color: #333;
+    width: 100%
 }
 
 .menu a{
     color: #E4C049;
     cursor: pointer;
     font-family: Cybernetyka;
-    font-size: 1.6vmin;
+    font-size: 15px;
     letter-spacing: 5px;
-    margin: 0px 10px;
+    //margin: 0px 10px;
     padding: 8px 8px;
     text-decoration: none;
-    display: inline-block
+
+    //font-size: 15px;
+    //display: block;
+    margin: 0px;    
 }
 
 #inicio,#info,#ubicacion,#about{
-    display: inline-block;
+    display: block;
 }
 
 .menu a:before, .menu a:after{
-    font-size: 2.3vmin;
-    opacity: 0;
-    top: 0px;
-    transition: 0.8s;
-    content: '···';
-}
-
-.menu a:hover:before, .menu a:hover:after{
-    opacity: 1;
-    transform: translateX(0px);
+    display: none;
 }
 
 #menuMovil{
-    display: none;
+    display: block;
 }
 
 #titulo{
@@ -102,43 +100,18 @@ h2{
     transition: 0.3s;
 }
 
-/*@media screen and (max-width: 900px){
+.menu a#info, .menu a#ubicacion, .menu a#about{
+    display: none;
+} 
 
-    #logo{
-        padding-top: 10%;
-    }
+.menu a#menuMovil{
+    display: block;
+    position: absolute;
+}
 
-    .menu{
-        position: fixed;
-        margin-top: 0%;
-        margin-bottom: 0%;
-        background-color: #333;
-        width: 100%
-    }
-
-    .menu a{
-        font-size: 15px;
-        display: block;
-        margin: 0px;
-    }
-
-    .menu a:before, .menu a:after{
-        display: none;
-    }
-
-    .menu a#info, .menu a#ubicacion, .menu a#about{
-        display: none;
-    } 
-
-    .menu a#menuMovil{
-        display: block;
-        position: absolute;
-    }
-
-    #menuMovil{  
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none; 
-    }
-}*/
+#menuMovil{  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
