@@ -22,9 +22,9 @@
      <question>
         <type>select</type>
         <title>4.¿Qué etiqueta no ha existido nunca en la especificación de HTML?</title>
-        <option>Carn</option>
-        <option>Peix</option> 
-        <option>Res, està mort</option>
+        <option>&lt;nav&gt;</option>
+        <option>&lt;header&gt;</option> 
+        <option>&lt;marquee&gt;</option>
         <answer>2</answer>
     </question>
     <question>
