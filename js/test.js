@@ -16,14 +16,7 @@ function gestionarXml(datosXml) {
     //
     for (i = 0; i < 10; i++) {
         var titulo = xmlDoc.getElementsByTagName("title")[i].innerHTML;
-        ponerTitulos(titulo);
-    }
-
-}
-
-//Poner los titulos en el HTML
-function ponerTitulos(titulo) {
-    for (i = 0; i < 10; i++) {
         document.getElementsByTagName("h4")[i].innerHTML = titulo;
     }
+
 }
