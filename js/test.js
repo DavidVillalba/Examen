@@ -6,18 +6,24 @@ window.onload = function () {
             gestionarXml(this);
         }
     };
-    xhttp.open("GET", "xml/formulario.xml", true); //cambiar en github
+    xhttp.open("GET", "https://rawgit.com/DavidVillalba/Examen-Autocorreccion/tree/v.24_01_2018/xml", true); //cambiar en github
     xhttp.send();
-
-    setInterval(actualizarTime, 1000);
 }
 
 function gestionarXml(datosXml) {
     var xmlDoc = datosXml.responseXML;//Parse XML a xmlDOC
 
-    for (i = 0; i < 10; i++) {
-        var titulos = xmlDoc.getElementsByTagName("title")[i].innerHTML;
-        
-    }
+    //
+    //for (i = 0; i < 10; i++) {
+        var titulo = xmlDoc.getElementsByTagName("title")[0].innerHTML;
+        ponerTitulos(titulo);
+    //}
 
+}
+
+//Poner los titulos en el HTML
+function ponerTitulos(titulo) {
+    //for (i = 0; i < 10; i++) {
+        document.getElementsByTagName("h4")[0].innerHTML = titulo;
+    //}
 }
