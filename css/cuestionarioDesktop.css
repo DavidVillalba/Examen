@@ -26,11 +26,11 @@ body {
     background: url(../img/fondo.jpg) no-repeat 100% 0 fixed;
     background-position: 50% 50%;
     background-size: cover;
-    position: relative;
-    width: 80%;
+    /*position: relative;*/
+    /*width: 80%;*/
     padding-left: 10%;
     padding-right: 10%;
-    height: 1245px;
+    /*height: 1245px;*/
 }
 
 header{

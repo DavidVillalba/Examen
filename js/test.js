@@ -11,6 +11,10 @@ window.onload = function () {
     xhttp.send();
 }
 
+var decodeEntities = (function () {
+    // this prevents any overhead from creating the object each time
+    var element = document.createElement('div');
+
 function gestionarXml(datosXml) {
     var xmlDoc = datosXml.responseXML;//Parse XML a xmlDOC
 
@@ -31,12 +35,13 @@ function gestionarXml(datosXml) {
 }
 
 function ponerDatosSelectHtml(opt, numPregunta) {
-    var select = document.getElementsByTagName("select")[numPregunta-2];
+    var select = document.getElementsByTagName("select")[numPregunta - 2];
     for (i = 0; i < opt.length; i++) {
         var option = document.createElement("option");
         option.text = opt[i];
-        option.value = i;
+        option.value = i + 1;
         select.options.add(option);
     }
 }
 
+/*http://jsfiddle.net/LYteC/4/*/
