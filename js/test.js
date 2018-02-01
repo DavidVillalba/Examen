@@ -1,3 +1,4 @@
+
 window.onload = function () {
     //Leer XML >> xml/formulario.xml
     var xhttp = new XMLHttpRequest();
@@ -19,24 +20,23 @@ function gestionarXml(datosXml) {
         document.getElementsByTagName("h4")[i].innerHTML = titulo;
     }
 
-    //Text
-    //Select
-    var opcionesSelect = [];
-    var opcion = xmlDoc.getElementsByTagName("question")[2].getElementsByTagName('option').length;
-    for (i = 0; i < opcion; i++) {
-        opcionesSelect[i] = xmlDoc.getElementsByTagName("question")[2].getElementsByTagName('option')[i].innerHTML;
+    for (numPregunta = 2; numPregunta < 4; numPregunta++) {
+        var opcionesSelect = [];
+        var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
+        for (i = 0; i < nopt; i++) {
+            opcionesSelect[i] = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option')[i].innerHTML;
+        }
+        ponerDatosSelectHtml(opcionesSelect, numPregunta);
     }
-    
-    ponerDatosSelectHtml(opcionesSelect);
-
 }
 
-function ponerDatosSelectHtml(opcion) {
-    var select = document.getElementsByTagName("select")[0];
-    for (i = 0; i < opcion.length; i++) {
+function ponerDatosSelectHtml(opt, numPregunta) {
+    var select = document.getElementsByTagName("select")[numPregunta-2];
+    for (i = 0; i < opt.length; i++) {
         var option = document.createElement("option");
-        option.text = opcion[i];
-        option.value = i + 1;
+        option.text = opt[i];
+        option.value = i;
         select.options.add(option);
     }
 }
+
