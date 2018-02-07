@@ -1,6 +1,7 @@
 
 window.onload = function () {
     //Leer XML >> xml/formulario.xml
+    var url="https://rawgit.com/urbinapro/jsxml/master/json/preguntas.json";
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
