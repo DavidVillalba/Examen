@@ -8,7 +8,7 @@
     </question>
     <question>
         <type>text</type>
-        <title>2.En XML Schema los tipos de datos se clasifican en...</title>
+        <title>2.En XML Schema los tipos de datos se clasifican en</title>
         <answer>Simples y Complejos</answer>
     </question>
     <question>
@@ -29,10 +29,10 @@
     </question>
     <question>
         <type>multiple</type>
-        <title>5.¿Cuál de las siguientes afirmaciones es verdadera?</title>
-        <option>a) Todos los documentos XML deben tener una etiqueta raíz.</option>
-        <option>b) Todas las etiquetas son sensibles a mayúsculas/minúsculas.</option> 
-        <option>c) Todos las etiquetas no tienen que estar correctamente anidadas.</option> 
+        <title>5.En el body se puede:</title>
+        <option>a) Insertar imágenes y texto.</option>
+        <option>b) Insertar tablas y fondos.</option> 
+        <option>c) Solamente se define el titulo.</option> 
         <answer>1</answer>
         <answer>2</answer>
     </question>
