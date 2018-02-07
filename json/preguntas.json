@@ -1,0 +1,107 @@
+{
+    "question": [
+        {
+            "type": "text",
+            "title": "1.¿Qué significa XML?",
+            "answer": "eXtensible Markup Language"
+        },
+        {
+            "type": "text",
+            "title": "2.En XML Schema los tipos de datos se clasifican en",
+            "answer": "Simples y Complejos"
+        },
+        {
+            "type": "select",
+            "title": "3.¿Cómo se describe la estructura y el contenido de un documento XML?",
+            "option": [
+                "a) XPath",
+                "b) XML Schema",
+                "c) XSL"
+            ],
+            "answer": "1"
+        },
+        {
+            "type": "select",
+            "title": "4.¿Qué etiqueta no ha existido nunca en la especificación de HTML?",
+            "option": [
+                "<nav>",
+                "<header>",
+                "<marquee>"
+            ],
+            "answer": "2"
+        },
+        {
+            "type": "multiple",
+            "title": "5.En el body se puede:",
+            "option": [
+                "a) Insertar imágenes y texto.",
+                "b) Insertar tablas y fondos.",
+                "c) Solamente se define el titulo."
+            ],
+            "answer": [
+                "1",
+                "2"
+            ]
+        },
+        {
+            "type": "multiple",
+            "title": "6.¿Cómo se puede utilizar CSS en una página web?",
+            "option": [
+                "a) Vinculado.",
+                "b) Solo vinculado.",
+                "c) Insertado."
+            ],
+            "answer": [
+                "1",
+                "3"
+            ]
+        },
+        {
+            "type": "checkbox",
+            "title": "7.En HTML, una tabla de datos emplea las siguientes etiquetas",
+            "option": [
+                "a) <thead>",
+                "b) <tfoot>",
+                "c) <caption>"
+            ],
+            "answer": [
+                "1",
+                "2",
+                "3"
+            ]
+        },
+        {
+            "type": "checkbox",
+            "title": "8.¿Cuál de las siguientes afirmaciones es falsa?",
+            "option": [
+                "a) Todos los documentos XML deben tener un DTD",
+                "b) Todas las etiquetas de un documento XML se tienen que escribir en minúsculas",
+                "c) Todas las etiquetas se tienen que cerrar correctamente"
+            ],
+            "answer": [
+                "1",
+                "2"
+            ]
+        },
+        {
+            "type": "radio",
+            "title": "9.Respecto XML y HTML",
+            "option": [
+                "a) XML es la nueva tecnología que sustituirá a HTML.",
+                "b) XML se puede emplear para desarrollar algún lenguaje de marcado que sustituya a HTML.",
+                "c) XML y HTML no guardan ninguna relación."
+            ],
+            "answer": "2"
+        },
+        {
+            "type": "radio",
+            "title": "10.¿Cuál de las siguientes afirmaciones es verdadera?",
+            "option": [
+                "a) Las etiquetas pueden estar anidadas, pero no solapadas.",
+                "b) Las etiquetas pueden tener varios atributos con el mismo nombre.",
+                "c) El primer carácter de una etiqueta puede ser un número."
+            ],
+            "answer": "1"
+        }
+    ]
+}
