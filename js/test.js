@@ -1,60 +1,79 @@
 
 window.onload = function () {
-    //Leer XML >> xml/formulario.xml
-    var url="https://rawgit.com/urbinapro/jsxml/master/json/preguntas.json";
+    var url = "https://rawgit.com/DavidVillalba/Examen/master/json/preguntas.json";
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            gestionarXml(this);
+            gestionarJson(this.responseText);
         }
     };
-    xhttp.open("GET", "https://rawgit.com/DavidVillalba/Examen/master/xml/formulario.xml", true); //cambiar en github
+    xhttp.open("GET", url, true);
     xhttp.send();
 }
 
-function gestionarXml(datosXml) {
-    var xmlDoc = datosXml.responseXML;//Parse XML a xmlDOC
+function gestionarJson(datosJson) {
+    var preguntas = JSON.parse(datosJson);//Parse XML a xmlDOC
 
-    //Coger title del xml y ponerlo en el html
+    //Coger title del Json y ponerlo en el html
     for (i = 0; i < 10; i++) {
-        var titulo = xmlDoc.getElementsByTagName("title")[i].innerHTML;
-        document.getElementsByTagName("h4")[i].innerHTML = titulo;
+        document.getElementsByTagName("h4")[i].innerHTML = preguntas.question[i].title;
     }
 
-    /*
-    Select
-    */
+    //Select
     for (i = 2; i < 6; i++) {
-        var opcionesSelect = [];
-        var nopt = xmlDoc.getElementsByTagName("question")[i].getElementsByTagName('option').length;
-        for (j = 0; j < nopt; j++) {
-            opcionesSelect[j] = xmlDoc.getElementsByTagName("question")[i].getElementsByTagName('option')[j].innerHTML;
-        }
-
+        var opciones = preguntas.question[i].option.length;
         var select = document.getElementsByTagName("select")[i - 2];
-        for (k = 0; k < opcionesSelect.length; k++) {
+        for (j = 0; j < opciones; j++) {
             var option = document.createElement("option");
-            option.text = opcionesSelect[k];
-            option.value = k + 1;
+            option.text = preguntas.question[i].option[j];
+            option.value = j + 1;
             select.options.add(option);
         }
-        //ponerDatosSelectHtml(opcionesSelect, i);
     }
 
-    /*
-    Checkbox
-    */
-    
-}
-
-function ponerDatosSelectHtml(opt, i) {
-    var select = document.getElementsByTagName("select")[i - 2];
-    for (i = 0; i < opt.length; i++) {
-        var option = document.createElement("option");
-        option.text = opt[i];
-        option.value = i + 1;
-        select.options.add(option);
+    //Checkbox
+    for (i = 6; i < 8; i++) {
+        var opciones = preguntas.question[i].option.length;
+        var checkbox = document.getElementsByTagName("div")[i - 4];
+        for (j = 0; j < opciones; j++) {
+            var label = document.createElement("label");
+            var input = document.createElement("input");
+            var span = document.createElement("span");
+            var br = document.createElement("br");
+            checkbox.appendChild(label);
+            label.appendChild(input);
+            label.appendChild(span);
+            input.type = "checkbox";
+            input.value = j + 1;
+            span.innerText = preguntas.question[i].option[j];
+            checkbox.appendChild(br);
+        }
     }
-}
 
-/*http://jsfiddle.net/LYteC/4/*/
+    //Radio
+    for (i = 8; i < 10; i++) {
+        var opciones = preguntas.question[i].option.length;
+        var radio = document.getElementsByTagName("div")[i - 4];
+        if (i == 8) {
+            agregaName = "opcion9"
+        }
+        else {
+            agregaName = "opcion10"
+        }
+        for (j = 0; j < opciones; j++) {
+            var label = document.createElement("label");
+            var input = document.createElement("input");
+            var span = document.createElement("span");
+            var br = document.createElement("br");
+            radio.appendChild(label);
+            label.appendChild(input);
+            label.appendChild(span);
+            input.type = "radio";
+            input.name = agregaName;
+            input.value = j + 1;
+            span.innerText = preguntas.question[i].option[j];
+            radio.appendChild(br);
+        }
+    }
+
+}

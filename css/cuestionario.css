@@ -1,22 +1,19 @@
 @font-face {
     font-family: 'Cybernetyka';
     src: url('../fonts/Cybernetyka.eot');
-    src: url('../fonts/Cybernetyka.woff2') format('woff2'),
-        url('../fonts/Cybernetyka.eot?#iefix') format('embedded-opentype');
+    src: url('../fonts/Cybernetyka.woff2') format('woff2'), url('../fonts/Cybernetyka.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'CybernetykaNormal';
-    src: url('../fonts/CybernetykaNormal.woff') format('woff'),
-        url('../fonts/CybernetykaNormal.ttf') format('truetype'),
-        url('../fonts/CybernetykaNormal.svg#CybernetykaNormal') format('svg');
+    src: url('../fonts/CybernetykaNormal.woff') format('woff'), url('../fonts/CybernetykaNormal.ttf') format('truetype'), url('../fonts/CybernetykaNormal.svg#CybernetykaNormal') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-body,html{
+body, html {
     padding: 0px;
     margin: 0px;
 }
@@ -30,32 +27,31 @@ body {
     margin-bottom: 10px;
 }
 
-header{
+header {
     text-align: center;
 }
 
-#logo{
+#logo {
     margin-top: 10px;
 }
 
-#titulo{
+#titulo {
     color: #FBFCFC;
     letter-spacing: 10px;
     font-family: Cybernetyka;
 }
 
-
-#containerForm{
+#containerForm {
     border-radius: 15px;
     padding: 5px 0;
-    background-color: rgba(46,44,41,0.7);
+    background-color: rgba(56, 56, 56, 0.8);
 }
 
-#formulario{
+#formulario {
     padding: 0% 3% 0% 3%;
 }
 
-h3{
+h3 {
     color: #E4C049;
     text-align: center;
     letter-spacing: 5px;
@@ -63,23 +59,29 @@ h3{
     font-family: Cybernetyka;
 }
 
-h4{
-    color: #FBFCFC;
+h4 {
+    color: #E4C049;
     font-size: 20px;
+    letter-spacing: 1px;
 }
 
-#containerBtn{
-    margin-top: 10px;
+span {
+    color: #FBFCFC;
+    letter-spacing: 1px;
+}
+
+#containerBtn {
+    margin-top: 40px;
     bottom: 10%;
     position: relative;
     text-align: center;
 }
 
-#containerBtn a{
+#containerBtn a {
     opacity: 0.8;
 }
 
-#containerBtn a:hover{
+#containerBtn a:hover {
     opacity: 1;
     transition: 0.3s;
 }
