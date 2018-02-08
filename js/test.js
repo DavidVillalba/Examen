@@ -36,7 +36,7 @@ function gestionarJson(datosJson) {
         var opciones = preguntas.question[i].option.length;
         var checkbox = document.getElementsByTagName("div")[i - 4];
         for (j = 0; j < opciones; j++) {
-            var label = document.createElement("lable");
+            var label = document.createElement("label");
             var input = document.createElement("input");
             var span = document.createElement("span");
             var br = document.createElement("br");
@@ -44,6 +44,7 @@ function gestionarJson(datosJson) {
             label.appendChild(input);
             label.appendChild(span);
             input.type = "checkbox";
+            input.value = j + 1;
             span.innerText = preguntas.question[i].option[j];
             checkbox.appendChild(br);
         }
@@ -53,8 +54,14 @@ function gestionarJson(datosJson) {
     for (i = 8; i < 10; i++) {
         var opciones = preguntas.question[i].option.length;
         var radio = document.getElementsByTagName("div")[i - 4];
+        if (i == 8) {
+            agregaName = "opcion9"
+        }
+        else {
+            agregaName = "opcion10"
+        }
         for (j = 0; j < opciones; j++) {
-            var label = document.createElement("lable");
+            var label = document.createElement("label");
             var input = document.createElement("input");
             var span = document.createElement("span");
             var br = document.createElement("br");
@@ -62,6 +69,8 @@ function gestionarJson(datosJson) {
             label.appendChild(input);
             label.appendChild(span);
             input.type = "radio";
+            input.name = agregaName;
+            input.value = j + 1;
             span.innerText = preguntas.question[i].option[j];
             radio.appendChild(br);
         }

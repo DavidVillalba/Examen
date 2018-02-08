@@ -46,6 +46,8 @@ function inicio() {
     document.getElementById("titulo").style.display = "block";
     document.getElementById("containerBtn").style.display = "block";
     document.getElementById("containerInfo").style.display = "none";
+    document.getElementById("containerUbicacion").style.display="none";
+    document.getElementById("containerAbout").style.display="none";
 }
 
 function info() {
@@ -58,6 +60,8 @@ function info() {
     document.getElementById("titulo").style.display = "none";
     document.getElementById("containerBtn").style.display = "none";
     document.getElementById("containerInfo").style.display = "block";
+    document.getElementById("containerUbicacion").style.display="none";
+    document.getElementById("containerAbout").style.display="none";
 }
 
 function ubicacion() {
@@ -67,6 +71,12 @@ function ubicacion() {
         document.getElementById("about").style.display = "none";
         document.getElementById("menuMovil").style.position = "absolute";
     }
+    document.getElementById("titulo").style.display = "none";
+    document.getElementById("containerBtn").style.display = "none";
+    document.getElementById("containerInfo").style.display = "none";
+    document.getElementById("containerUbicacion").style.display="block";
+    document.getElementById("containerAbout").style.display="none";
+    
 }
 
 function about() {
@@ -76,4 +86,9 @@ function about() {
         document.getElementById("ubicacion").style.display = "none";
         document.getElementById("menuMovil").style.position = "absolute";
     }
+    document.getElementById("titulo").style.display = "none";
+    document.getElementById("containerBtn").style.display = "none";
+    document.getElementById("containerInfo").style.display = "none";
+    document.getElementById("containerUbicacion").style.display="none";
+    document.getElementById("containerAbout").style.display="block";
 }

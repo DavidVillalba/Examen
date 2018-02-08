@@ -39,8 +39,8 @@
                 "c) Solamente se define el titulo."
             ],
             "answer": [
-                "1",
-                "2"
+                "0",
+                "1"
             ]
         },
         {
@@ -52,8 +52,8 @@
                 "c) Insertado."
             ],
             "answer": [
-                "1",
-                "3"
+                "0",
+                "2"
             ]
         },
         {
@@ -65,9 +65,9 @@
                 "c) <caption>"
             ],
             "answer": [
+                "0",
                 "1",
-                "2",
-                "3"
+                "2"
             ]
         },
         {
@@ -79,8 +79,8 @@
                 "c) Todas las etiquetas se tienen que cerrar correctamente."
             ],
             "answer": [
-                "1",
-                "2"
+                "0",
+                "1"
             ]
         },
         {
@@ -91,7 +91,7 @@
                 "b) XML se puede emplear para desarrollar algún lenguaje de marcado que sustituya a HTML.",
                 "c) XML y HTML no guardan ninguna relación."
             ],
-            "answer": "2"
+            "answer": "1"
         },
         {
             "type": "radio",
@@ -101,7 +101,7 @@
                 "b) Las etiquetas pueden tener varios atributos con el mismo nombre.",
                 "c) El primer carácter de una etiqueta puede ser un número."
             ],
-            "answer": "1"
+            "answer": "0"
         }
     ]
 }
