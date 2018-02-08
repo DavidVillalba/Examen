@@ -7,7 +7,7 @@
         },
         {
             "type": "text",
-            "title": "2.En XML Schema los tipos de datos se clasifican en",
+            "title": "2.En XML Schema los tipos de datos se clasifican en...",
             "answer": "Simples y Complejos"
         },
         {
@@ -24,9 +24,9 @@
             "type": "select",
             "title": "4.¿Qué etiqueta no ha existido nunca en la especificación de HTML?",
             "option": [
-                "<nav>",
-                "<header>",
-                "<marquee>"
+                "a) <nav>",
+                "b) <header>",
+                "c) <marquee>"
             ],
             "answer": "2"
         },
@@ -58,7 +58,7 @@
         },
         {
             "type": "checkbox",
-            "title": "7.En HTML, una tabla de datos emplea las siguientes etiquetas",
+            "title": "7.En HTML, una tabla de datos emplea las siguientes etiquetas...",
             "option": [
                 "a) <thead>",
                 "b) <tfoot>",
@@ -74,9 +74,9 @@
             "type": "checkbox",
             "title": "8.¿Cuál de las siguientes afirmaciones es falsa?",
             "option": [
-                "a) Todos los documentos XML deben tener un DTD",
-                "b) Todas las etiquetas de un documento XML se tienen que escribir en minúsculas",
-                "c) Todas las etiquetas se tienen que cerrar correctamente"
+                "a) Todos los documentos XML deben tener un DTD.",
+                "b) Todas las etiquetas de un documento XML se tienen que escribir en minúsculas.",
+                "c) Todas las etiquetas se tienen que cerrar correctamente."
             ],
             "answer": [
                 "1",
