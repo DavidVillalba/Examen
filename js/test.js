@@ -12,7 +12,7 @@ window.onload = function () {
 }
 
 function gestionarJson(datosJson) {
-    var preguntas = JSON.parse(datosJson);//Parse XML a xmlDOC
+    var preguntas = JSON.parse(datosJson);//Parse JSON
 
     //Coger title del Json y ponerlo en el html
     for (i = 0; i < 10; i++) {
@@ -41,11 +41,13 @@ function gestionarJson(datosJson) {
             var span = document.createElement("span");
             var br = document.createElement("br");
             checkbox.appendChild(label);
+            label.innerText = preguntas.question[i].option[j];
             label.appendChild(input);
             label.appendChild(span);
+            label.className = "container";
             input.type = "checkbox";
             input.value = j + 1;
-            span.innerText = preguntas.question[i].option[j];
+            span.className = "checkmark";
             checkbox.appendChild(br);
         }
     }
@@ -55,10 +57,10 @@ function gestionarJson(datosJson) {
         var opciones = preguntas.question[i].option.length;
         var radio = document.getElementsByTagName("div")[i - 4];
         if (i == 8) {
-            agregaName = "opcion9"
+            agregaName = "opcion9";
         }
         else {
-            agregaName = "opcion10"
+            agregaName = "opcion10";
         }
         for (j = 0; j < opciones; j++) {
             var label = document.createElement("label");
@@ -66,12 +68,15 @@ function gestionarJson(datosJson) {
             var span = document.createElement("span");
             var br = document.createElement("br");
             radio.appendChild(label);
+            label.innerText = preguntas.question[i].option[j];
             label.appendChild(input);
             label.appendChild(span);
+            label.className = "containerRadio";
             input.type = "radio";
             input.name = agregaName;
             input.value = j + 1;
-            span.innerText = preguntas.question[i].option[j];
+            span.className = "checkmarkRadio";
+            //span.innerText = preguntas.question[i].option[j];
             radio.appendChild(br);
         }
     }
