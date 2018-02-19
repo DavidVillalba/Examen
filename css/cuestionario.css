@@ -100,14 +100,14 @@ span {
     border: none;
     color: #FBFCFC;
     font-size: 2vw;
-    height: 35px;
+    height: 4vw;
     padding: 5px;
-    width: 268px;
+    width: 25vw;
 }
 
-select: option:checked{
+/*select: option:checked{
     background-color: #E4C049;
-}
+}*/
 
 /*--------------------------------------------------------------*/
 
