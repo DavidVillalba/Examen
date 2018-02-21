@@ -34,7 +34,7 @@ function gestionarJson(datosJson) {
     //Checkbox
     for (i = 6; i < 8; i++) {
         var opciones = preguntas.question[i].option.length;
-        var checkbox = document.getElementsByTagName("div")[i - 2];
+        var checkbox = document.getElementsByTagName("div")[i+2];
         for (j = 0; j < opciones; j++) {
             var label = document.createElement("label");
             var input = document.createElement("input");
@@ -55,7 +55,7 @@ function gestionarJson(datosJson) {
     //Radio
     for (i = 8; i < 10; i++) {
         var opciones = preguntas.question[i].option.length;
-        var radio = document.getElementsByTagName("div")[i - 2];
+        var radio = document.getElementsByTagName("div")[i+2];
         if (i == 8) {
             agregaName = "opcion9";
         }
