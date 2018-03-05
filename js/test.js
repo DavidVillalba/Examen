@@ -21,6 +21,8 @@ window.onload = function () {
     };
 }
 
+alert("ewgweggf");
+
 function gestionarJson(datosJson) {
     var preguntas = JSON.parse(datosJson);//Parse JSON
 
@@ -113,7 +115,7 @@ function comprobar() {
     //Multiple
     for (i = 4; i < 6; i++) {
         var multiple = false;
-        for (j = 1; j < (formElement.elements[i].length); j++) {
+        for (j = 0; j < formElement.elements[i].length; j++) {
             var option = formElement.elements[i].options[j];
             if (option.selected) {
                 multiple = true;
@@ -128,19 +130,14 @@ function comprobar() {
     //Check
     for (i = 6; i < 8; i++) {
         var check = false;
-        var nombre;
-        if (i == 6) {
-            nombre = formElement.seis;
-        } else {
-            nombre = formElement.siete;
-        }
-        for (j = 0; j < nombre.length; j++) {
-            if (nombre[j].checked) {
+        for (j = 0; j < formElement.elements[i].length; j++) {
+            var option = formElement.elements[i].options[j];
+            if (option.checked) {
                 check = true;
             }
         }
         if (!check) {
-            nombre[0].focus();
+            formElement.elements[i].focus();
             alert("Responde la pregunta: " + (i + 1));
             return false;
         }
