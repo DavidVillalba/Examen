@@ -1,3 +1,10 @@
+var formElement = null;
+var respuestaSelect = [];
+var respuestasMultiple = [];
+var respuestaText = [];
+var respuestaRadio = [];
+var respuestasCheckbox = [];
+var notaFinal = 10;
 
 window.onload = function () {
     var url = "https://rawgit.com/DavidVillalba/Examen/master/json/preguntas.json";
@@ -13,10 +20,8 @@ window.onload = function () {
     formElement = document.getElementById("formulario");
     document.getElementById("containerBtn").onclick = function () {
         if (comprobar() == true) {
-            if (confirm("¿Quieres saber su nota final?")) {
-				corregir();
-				MostrarNota();
-			}
+            corregir();
+            mostrarNota();
         }
     };
 }
@@ -47,6 +52,12 @@ function gestionarJson(datosJson) {
     for (i = 6; i < 8; i++) {
         var opciones = preguntas.question[i].option.length;
         var checkbox = document.getElementsByTagName("div")[i + 2];
+        if (i == 6) {
+            agregaName = "opcion7";
+        }
+        else {
+            agregaName = "opcion8";
+        }
         for (j = 0; j < opciones; j++) {
             var label = document.createElement("label");
             var input = document.createElement("input");
@@ -58,6 +69,7 @@ function gestionarJson(datosJson) {
             label.appendChild(span);
             label.className = "container";
             input.type = "checkbox";
+            input.name = agregaName;
             input.value = j + 1;
             span.className = "checkmark";
             checkbox.appendChild(br);
@@ -115,7 +127,7 @@ function comprobar() {
     //Multiple
     for (i = 4; i < 6; i++) {
         var multiple = false;
-        for (j = 0; j < formElement.elements[i].length; j++) {
+        for (j = 1; j < formElement.elements[i].length; j++) {
             var option = formElement.elements[i].options[j];
             if (option.selected) {
                 multiple = true;
@@ -130,29 +142,34 @@ function comprobar() {
     //Check
     for (i = 6; i < 8; i++) {
         var check = false;
-        for (j = 0; j < formElement.elements[i].length; j++) {
-            var option = formElement.elements[i].options[j];
-            if (option.checked) {
+        var opcion;
+        if (i == 6) {
+            opcion = formElement.opcion7;
+        } else {
+            opcion = formElement.opcion8;
+        }
+        for (j = 0; j < opcion.length; j++) {
+            if (opcion[j].checked) {
                 check = true;
             }
         }
         if (!check) {
-            formElement.elements[i].focus();
+            opcion[0].focus();
             alert("Responde la pregunta: " + (i + 1));
             return false;
         }
     }
+
     //Radio
     for (i = 8; i < 10; i++) {
-
-        var nombreRadio = null;
+        var opcionRadio = null;
         if (i == 8) {
-            nombreRadio = formElement.nueve;
+            opcionRadio = formElement.opcion9;
 
         } else {
-            nombreRadio = formElement.diez;
+            opcionRadio = formElement.opcion10;
         }
-        if (nombreRadio.value == "") {
+        if (opcionRadio.value == "") {
             formElement.elements[i].focus();
             alert("Por favor, responde la pregunta " + (i + 1));
             return false;
@@ -181,35 +198,35 @@ function corregir() {
         }
     }
 
-    /*for (a = 4; a < 6; a++) {
-        var select = formElement.elements[a];
+    /*for (i = 4; i < 6; i++) {
+        var select = formElement.elements[i];
         var escorrecta = [];
-        for (i = 1; i < (select.length); i++) {
-            var opt = select.options[i];
+        for (j = 1; j < (select.length); j++) {
+            var opt = select.options[j];
             if (opt.selected == true) {
-                escorrecta[i] = false;
-                for (j = 0; j < respuestasMultiple[a].length; j++) {
-                    if ((i) == respuestasMultiple[a][j]) escorrecta[i] = true;
+                escorrecta[j] = false;
+                for (k = 0; k < respuestasMultiple[i].length; k++) {
+                    if ((j) == respuestasMultiple[i][k]) escorrecta[j] = true;
                 }
                 if (escorrecta[i] == true) {
                     notaFinal = notaFinal;
                 } else {
-                    notaFinal = notaFinal - (1 / respuestasMultiple[a].length);
+                    notaFinal = notaFinal - (1 / respuestasMultiple[i].length);
                 }
             }
         }
     }
 
-    for (a = 6; a < 8; a++) {
+    /*for (a = 6; a < 8; a++) {
         var escorrecta = [];
-        var nombreCheckbox;
+        var opcionCheckbox;
         if (a == 6) {
-            nombreCheckbox = formElement.seis;
+            opcionCheckbox = formElement.opcion7;
         } else {
-            nombreCheckbox = formElement.siete;
+            opcionCheckbox = formElement.opcion8;
         }
-        for (b = 0; b < nombreCheckbox.length; b++) {
-            if (nombreCheckbox[b].checked) {
+        for (b = 0; b < opcionCheckbox.length; b++) {
+            if (opcionCheckbox[b].checked) {
                 escorrecta[b] = false;
                 for (c = 0; c < respuestasCheckbox[a].length; c++) {
                     if ((b) == respuestasCheckbox[a][c]) escorrecta[b] = true;
@@ -224,13 +241,13 @@ function corregir() {
     }*/
 
     for (i = 8; i < 10; i++) {
-        var nombreRadio;
+        var opcionRadio;
         if (i == 8) {
-            nombreRadio = formElement.nueve;
+            opcionRadio = formElement.opcion9;
         } else {
-            nombreRadio = formElement.diez;
+            opcionRadio = formElement.opcion10;
         }
-        if ((nombreRadio.value - 1) == respuestaRadio[i]) {
+        if ((opcionRadio.value - 1) == respuestaRadio[i]) {
             notaFinal = notaFinal;
         } else {
             notaFinal = notaFinal - 1;
@@ -238,6 +255,6 @@ function corregir() {
     }
 }
 
-function MostrarNota(){
-	alert("Tu nota final es "+notaFinal.toFixed(2));
+function mostrarNota() {
+    alert("Tu nota final es " + notaFinal.toFixed(2));
 }
