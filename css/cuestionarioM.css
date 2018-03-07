@@ -93,7 +93,7 @@ span {
     font-size: 20px;
     height: 30px;
     padding: 5px;
-    width: 40%;
+    width: 95%;
 }
 
 /*.styled-select {
@@ -112,7 +112,7 @@ span {
     font-size: 20px;
     height: 40px;
     padding: 5px;
-    width: 40%;
+    width: 95%;
 }
 
 .styled-selectMult select {
@@ -123,7 +123,7 @@ span {
     font-size: 20px;
     height: 110px;
     padding: 5px;
-    width: 40%;
+    width: 95%;
 }
 
 /*select: option:checked{
