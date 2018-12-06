@@ -7,7 +7,7 @@ var respuestaRadio = [];
 var nota = 0;
 
 window.onload = function () {
-    var url = "https://rawgit.com/DavidVillalba/Examen/master/json/preguntas.json";
+    var url = "https://cdn.jsdelivr.net/gh/DavidVillalba/Examen/json/preguntas.json";
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
